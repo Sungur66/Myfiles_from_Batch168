@@ -1,0 +1,18 @@
+*{
+  color: red;
+}
+.highlight{
+    color: blue;
+    font-size: 1.3rem;
+}
+.center{
+    text-align: center;
+}
+#p-1{
+    color: black;
+}
+
+span.span-el{
+    color: rgb(4, 43, 43);
+    font-size: 1.2rem;
+}

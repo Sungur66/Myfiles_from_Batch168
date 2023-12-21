@@ -1,0 +1,9 @@
+open() komutu için parametreler:
+open(dosya_adi, dosyaya_erisim_modu, karakter_format_turu)
+Dosyaya_Eri?im_Modu
+"w", verilen dosya ad?yla dosya olu?turur, ayn? adl? dosya varsa, olan? siler
+"a", verilen dosyada cursor un kald??? en son yerden itibaren ekleme yapar
+"x", verilen dosya ad?yla dosya olu?turur, ayn? adl? dosya varsa hata verir
+"r", verilen dosyadan sadece dosyadan okuma yapar, de?i?iklik yapmaz, open komutunun default parametresidir.
+Karakter_Format_Turu
+encoding ="" karakter format?d?r. utf-8 tr dahil nerdeyse tüm dilleri kapsar. Yazmazsak Tr vs karakterler tan?nmaz.
