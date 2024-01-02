@@ -1,0 +1,88 @@
+
+Fatih Calik
+  1 day ago
+Arkadaslar ve hocalarim merhaba herkese. Kadim dostumuz SQL :slightly_smiling_face: ile pratik yapmak hem de artik calismalarimda kullandigim datalari daha organize hale getirmek icin SQL kullanma fikirleri hasila olunca, bir yandan da :panda_face: pandas ve :snake: pythonu cok seven birisi olarak ikisini beraber kullanmanin iyi bir fikir olacagini dusundum. Basit bor notebook hazirladim, ETL surecleri, SQL ve python kullanimi hakkinda. Bazi arkadaslar icin cok basit gelebilir ancak paylasmak istedim.
+
+
+Instructor Dr. Fatih
+  1 day ago
+hocam evvela elinize sağlık..ben incelemeye başladım bile...özellikle SQL-ETL kısmını merak ediyorum
+
+
+ibrahim
+  23 hours ago
+ellerinize sağlık hocam. basit değil kapsamlı. gerçi bunları çoktan halleti bazı arkadaşlar :slightly_smiling_face: (edited) 
+
+
+Fatih Calik
+  23 hours ago
+@ibrahim
+ hocam tesekkur ederim. Tecrubelerinizi paylasirsaniz sevinirim. Hangi kutuphaneleri kullaniyorsunuz, hengi metotlari kullanisli buluyorsunuz, ya da sql-python baglantisini gerekli ve faydali buluyor musunuz yoksa tum islemleri SQL uzerinde yapmak mi daha mantikli. Hangi durumlarda ETL pipeline'i bu sekilde kurmak daha mantikli gibi konularda konusmak isterdim
+
+
+
+ibrahim
+  22 hours ago
+4 5 kütüphane var SQL de yani en azından postgre için. CSV leri postgre'ye atmak manuel olarak çok zor. diğer sql'lerde bu çok problem olmayabiliyor. bu konuda python müthiş kurtarıcı. saniyede 50bin lik satırı atıyor gördünüz sizde. benim terchim eğer çok sayıda csv var ise sql de join'leri yapıp kullanacağım main csv yi ptyhonla çekmek.  1 e-ticaret datasını ki devasa idi öyle yapmıştım. ama burda asıl csv karakter sorunları çıktığında ağlatır  :slightly_smiling_face: o kısmında uğraşırsınız hocam
+
+
+ibrahim
+  22 hours ago
+pipeline kısımları için çok endişe edici 1 durum olacağını sanmıyorum belki de ben karşılaşmadığım için ona çok 1 şey diyemem. ama python ile çoğu şey halledilmiş
+
+
+Fatih Calik
+  22 hours ago
+yani 
+@ibrahim
+ hocam, diyorsunuz ki LOAD asamasinda PostGRE uzerine csv atma konusunda problem var, bu konuda Pythondan destek alinabilir. Yani CSV dosyalarini PYTHON ile okursunuz (EXTRACT), gerekli islemleri python ile yaparsiniz - ki csv dosyalarinda bu cok zahmetli olabilir diyorsunuz - (TRANSFORM). akabinde bu dosyalari pythondaki 4-5 kutuphane sayesinde PostGRE yuklersiniz (LOAD) (edited) 
+
+
+ibrahim
+  22 hours ago
+aynen hocam. tek csv üzerinde işlem yapacaksanız python ve sql farketmez. tek csv pythonda çalışmadım ama ama yapanlar vardı görmüştüm
+
+
+Fatih Calik
+  22 hours ago
+baska ne gibi durumlarda bu tarz bir yapiya ihtiyac duyulabilir?
+
+
+ibrahim
+  22 hours ago
+sql daha dili satructured olduğu için eğer buna göre query yapacaksanız daha etkili. ama eda kısmında mecburen ptyhon
+
+
+Fatih Calik
+  22 hours ago
+peki data manipulation konusunda (yani database uzerine farkli kaynaklardan cektigimiz verilerin degistirilmesi, duzenlenmesi gibi konular) SQL uzerinde mi yapmak daha yaygin ve kullanisli yoksa araya python (pandas) gibi bir araci sokmak mi, sizce?
+
+
+ibrahim
+  22 hours ago
+sql'de daha çok  extract edeceğimiz verileri alıp tablo yaptığımız (kullanmayacağımız verilerde geri de kalır) için bunu elde etmeniz lazım. geri kalan eda ve manipülasyon bence python daha iyi olur. python'a gereksiz verisi çıkarılmış tablo veriyorsunuz. ama database de belki ilerde kullanacağınız veri hala saklı durur. sonra gelip kullanabilirsiniz. (edited) 
+
+
+Fatih Calik
+  22 hours ago
+tesekkur ederim 
+@ibrahim
+ hocam katkilariniz icin.:pray:
+
+
+ibrahim
+  22 hours ago
+estg hocam ellerinize sağlık sizin de
+
+
+Fatih Calik
+  22 hours ago
+Ben de bir senaryo vereyim. Bir otomasyon projesi yaptigimizi dusunelim, her gun belli saatlerde bulut uzerinde calismakta olan python scriptimiz:
+internetten farkli kaynaklardan veri toplamakta (EXTRACT)
+ve bu veri tabi ki epey manipulasyon gerektirecek bu islemleri yine python ile yapabiliriz (TRANSFORM)
+temizlenmis verilerimizi yapisal bir database uzerinde saklamaliyiz, bu verilerin SQL veritabanimiza yuklenmesi gerekli (LOAD). tabi hersey python uzerinde gerceklestigi icin load islemini de python ile gerceklestirebiliriz
+
+
+Cumali
+  20 hours ago
+Fatih hocam elinize sağlık:man-raising-hand::skin-tone-2:
