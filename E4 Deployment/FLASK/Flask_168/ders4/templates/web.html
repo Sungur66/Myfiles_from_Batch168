@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <table style="border-style: dotted;">
+        <thead>
+            <tr>
+                <th>İsim</th>
+                <th>Yaş</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{name}}</td>
+                <td>{{age}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <table style="border-style: solid">
+        {% if age >= 45 %}
+            <tr>
+                <td>Yaşınız 45'ten büyük ya da eşit</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td>
+                    Yaşınız 45'ten küçüktür.
+                </td>
+            </tr>
+        {% endif %}
+    </table>
+</body>
+</html>
